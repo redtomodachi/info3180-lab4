@@ -42,7 +42,7 @@ def upload():
 
     return render_template('upload.html', form=form)
 
-@app.route('"/uploads/<filename>')
+@app.route('/uploads/<filename>')
 def get_image(filename):
     print(filename)
     return send_from_directory(os.path.join(os.getcwd(),app.config['UPLOAD_FOLDER']), filename)
@@ -122,8 +122,8 @@ def page_not_found(error):
 
 def get_uploaded_images():
     rootdir = os.getcwd()
-    photo = []
+    img = []
     for subdir, dirs, files in os.walk(rootdir + '/uploads'):
         for file in files:
-            photo.apppend(file)
-    return photo[1:]   
+            img.append(file)
+    return img[1:]   

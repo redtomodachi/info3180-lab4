@@ -18,3 +18,23 @@ body {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+
+.containment 
+{
+    list-style: none;
+    padding: 0;
+}
+  
+.containment li 
+{
+    display: inline-block;
+    flex: 0 0 calc(25% - 10px); /* Four columns with margin in between */
+    margin: 5px;
+}
+  
+.containment img 
+{
+    width: 300px;
+    height: 250px;
+    display: block;
+}
